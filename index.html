@@ -3,62 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONSNC Foundation - NGO Initiatives</title>
+  <title>ONSNC Foundation - Building a Better Tomorrow</title>
   <meta name="description" content="ONSNC Foundation - Driving sustainable community projects, research, and global impact initiatives">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="ngo-final-styles.css">
 </head>
 <body>
 
-  <!-- ================= Navigation Header ================= -->
+  <!-- ================= HEADER SECTION ================= -->
   <header id="header">
     <nav class="navbar">
       <div class="nav-container">
+        <!-- Left: Logo -->
         <div class="logo">
           <a href="index.html">
             <span class="logo-icon">🌍</span>
-            <span class="logo-text">ONSNC Foundation</span>
           </a>
         </div>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#our-work">Our Work</a></li>
-          <li><a href="#campaigns">Campaigns</a></li>
-          <li><a href="#get-involved">Get Involved</a></li>
-          <li><a href="#media">Media Centre</a></li>
-          <li><a href="#resources">Resource Center</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <a href="#donate" class="btn-donate">Donate Now</a>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        
+        <!-- Center: Foundation Name -->
+        <div class="foundation-name">
+          <h1>ONSNC Foundation</h1>
         </div>
+
+        <!-- Right: Menu Button (All screens) -->
+        <div class="nav-controls">
+          <button class="nav-menu-btn" id="navMenuBtn">
+            <span class="menu-text">Menu</span>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Dropdown Navigation Menu -->
+      <div class="nav-dropdown-panel" id="navDropdownPanel">
+        <ul class="nav-dropdown-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="#our-work"><i class="fas fa-briefcase"></i> Our Work</a></li>
+          <li><a href="#campaigns"><i class="fas fa-bullhorn"></i> Campaigns</a></li>
+          <li><a href="#get-involved"><i class="fas fa-hands-helping"></i> Get Involved</a></li>
+          <li><a href="#media"><i class="fas fa-photo-video"></i> Media Centre</a></li>
+          <li><a href="#resources"><i class="fas fa-book"></i> Resource Center</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li class="donate-link"><a href="#donate" class="btn-donate-menu"><i class="fas fa-heart"></i> Donate Now</a></li>
+        </ul>
       </div>
     </nav>
   </header>
 
-  <!-- ================= Hero Section ================= -->
+  <!-- ================= HERO SECTION ================= -->
   <section id="ngo-hero">
-    <div class="hero-background">
-      <div class="hero-image-container">
-        <!-- Replace with your actual image -->
-        <img src="https://via.placeholder.com/1920x1080/87CEEB/ffffff?text=NGO+Impact+Image" alt="ONSNC Foundation Impact" class="hero-image">
-        <div class="hero-overlay"></div>
-      </div>
-    </div>
-    
     <div class="hero-content-wrapper">
       <div class="hero-content">
         <span class="hero-badge">🌍 Building a Better Tomorrow</span>
         <h1 class="hero-title">
-          <span class="hero-logo">🌍</span>
-          <span class="title-highlight">ONSNC Foundation</span>
+          <span class="title-highlight">Empowering Communities, Transforming Lives</span>
         </h1>
-        <p class="hero-description">Driving sustainable community projects, innovative research, and transformative global impact initiatives for a better future.</p>
+        <p class="hero-description">Together we can create lasting change through sustainable development, education, healthcare, and environmental conservation</p>
+        
+        <!-- Photo Grid -->
+        <div class="hero-photo-grid">
+          <div class="hero-photo-item">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop" alt="Poor Children" class="hero-photo">
+            <p class="photo-tagline">Supporting Underprivileged Children</p>
+          </div>
+          <div class="hero-photo-item">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop" alt="Students" class="hero-photo">
+            <p class="photo-tagline">Empowering Through Education</p>
+          </div>
+          <div class="hero-photo-item">
+            <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=400&h=300&fit=crop" alt="Climate Crisis" class="hero-photo">
+            <p class="photo-tagline">Fighting Climate Crisis</p>
+          </div>
+          <div class="hero-photo-item">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop" alt="Farmers" class="hero-photo">
+            <p class="photo-tagline">Supporting Rural Farmers</p>
+          </div>
+        </div>
         
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-explore">
@@ -70,12 +93,6 @@
             <i class="fas fa-rocket"></i>
           </a>
         </div>
-
-        <!-- Image Upload Section (For Admin/Development) -->
-        <div class="image-upload-section" style="display: none;">
-          <input type="file" id="heroImageUpload" accept="image/*">
-          <button onclick="uploadHeroImage()">Upload Hero Image</button>
-        </div>
       </div>
     </div>
 
@@ -85,7 +102,7 @@
     </div>
   </section>
 
-  <!-- ================= Mission Section ================= -->
+  <!-- ================= MISSION SECTION ================= -->
   <section id="mission">
     <div class="container">
       <div class="mission-grid">
@@ -115,7 +132,7 @@
     </div>
   </section>
 
-  <!-- ================= Projects Section ================= -->
+  <!-- ================= PROJECTS SECTION ================= -->
   <section id="projects">
     <div class="container">
       <div class="section-header">
@@ -208,7 +225,7 @@
     </div>
   </section>
 
-  <!-- ================= Civilization 2.0 Section ================= -->
+  <!-- ================= CIVILIZATION 2.0 SECTION ================= -->
   <section id="civilization-nexus">
     <div class="container">
       <div class="section-header">
@@ -217,14 +234,12 @@
         <p>Discover our comprehensive range of initiatives driving sustainable development and civilizational advancement</p>
       </div>
 
-      <!-- About Card -->
       <div class="civ-about-card">
         <div class="card-icon">🌍</div>
         <h3>About ONSNC Foundation</h3>
         <p>ONSNC (Open Network for Sustainable, Natural and Conscious Civilization) is a futuristic think-tank and innovation hub uniting science, ethics, and governance for Civilization 2.0 — a balanced, sustainable, and advanced human society.</p>
       </div>
 
-      <!-- Sectors Grid -->
       <div class="sectors-grid">
         
         <div class="sector-card">
@@ -315,7 +330,7 @@
     </div>
   </section>
 
-  <!-- ================= Get Involved Section ================= -->
+  <!-- ================= GET INVOLVED SECTION ================= -->
   <section id="get-involved">
     <div class="container">
       <div class="section-header">
@@ -358,7 +373,7 @@
     </div>
   </section>
 
-  <!-- ================= Stories in Motion Section ================= -->
+  <!-- ================= STORIES IN MOTION SECTION ================= -->
   <section id="stories-section">
     <div class="container">
       <div class="section-header">
@@ -369,10 +384,9 @@
 
       <div class="stories-grid">
         
-        <!-- Video Card 1 -->
         <div class="story-card">
           <div class="video-container">
-            <video controls poster="https://via.placeholder.com/600x400/9B59B6/ffffff?text=Video+Thumbnail+1">
+            <video controls poster="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop">
               <source src="your-video-1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -389,10 +403,9 @@
           </div>
         </div>
 
-        <!-- Video Card 2 -->
         <div class="story-card">
           <div class="video-container">
-            <video controls poster="https://via.placeholder.com/600x400/0066cc/ffffff?text=Video+Thumbnail+2">
+            <video controls poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop">
               <source src="your-video-2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -409,10 +422,9 @@
           </div>
         </div>
 
-        <!-- Video Card 3 -->
         <div class="story-card">
           <div class="video-container">
-            <video controls poster="https://via.placeholder.com/600x400/28a745/ffffff?text=Video+Thumbnail+3">
+            <video controls poster="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&h=400&fit=crop">
               <source src="your-video-3.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -431,7 +443,6 @@
 
       </div>
 
-      <!-- View All Button -->
       <div class="stories-cta">
         <a href="#all-stories" class="btn btn-explore">
           <span>View All Stories</span>
@@ -441,7 +452,7 @@
     </div>
   </section>
 
-  <!-- ================= CTA Section ================= -->
+  <!-- ================= CTA SECTION ================= -->
   <section id="cta">
     <div class="cta-content">
       <h2>Ready to Make a Difference?</h2>
@@ -453,7 +464,7 @@
     </div>
   </section>
 
-  <!-- ================= Footer ================= -->
+  <!-- ================= FOOTER SECTION ================= -->
   <footer id="footer">
     <div class="footer-content">
       <div class="footer-grid">
@@ -487,19 +498,28 @@
             <li><a href="#">Terms of Service</a></li>
           </ul>
         </div>
-        <div class="footer-col newsletter-col">
-          <h4>Subscribe to Our Newsletter</h4>
-          <p>Stay updated with our latest news and initiatives</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="text" name="name" placeholder="Name" required class="newsletter-input">
-            <input type="email" name="email" placeholder="Enter Your Email" required class="newsletter-input">
-            <button type="submit" class="btn-subscribe">
-              <span>Subscribe</span>
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
       </div>
+
+      <!-- Horizontal Line -->
+      <hr class="footer-divider">
+
+      <!-- Newsletter Section - Centered -->
+      <div class="newsletter-section">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Stay updated with our latest news and initiatives</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="text" name="name" placeholder="Name" required class="newsletter-input">
+          <input type="email" name="email" placeholder="Enter Your Email" required class="newsletter-input">
+          <button type="submit" class="btn-subscribe">
+            <span>Subscribe</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Horizontal Line -->
+      <hr class="footer-divider">
+
       <div class="footer-bottom">
         <p>&copy; 2025 ONSNC Foundation. All rights reserved.</p>
         <div class="footer-links">
@@ -510,6 +530,6 @@
     </div>
   </footer>
 
-  <script src="global.js"></script>
+  <script src="ngo-final-scripts.js"></script>
 </body>
 </html>
