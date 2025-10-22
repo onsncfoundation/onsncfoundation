@@ -168,7 +168,7 @@ img {
 }
 
 .navbar {
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 
 .nav-container {
@@ -178,11 +178,19 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  gap: 1rem;
 }
 
-/* Left: Logo */
+/* Left: Logo + Foundation Name */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
 .logo {
-  flex: 0 0 auto;
+  flex-shrink: 0;
 }
 
 .logo a {
@@ -191,28 +199,24 @@ img {
 }
 
 .logo-img {
-  height: 50px;
-  width: auto;
+  height: 40px;
+  width: 40px;
   object-fit: contain;
-}
-
-/* Center: Foundation Name + Donate Button */
-.header-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  text-align: center;
+  border-radius: 8px;
 }
 
 .foundation-name h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0;
   color: var(--primary-color);
+  white-space: nowrap;
 }
 
-.donate-btn-desktop {
-  margin-top: 0.25rem;
+/* Center: Donate Now Button */
+.header-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .btn-donate-header {
@@ -221,21 +225,25 @@ img {
   gap: 8px;
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .btn-donate-header:hover {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
 }
 
-/* Right: Menu Button */
-.nav-controls {
-  flex: 0 0 auto;
+/* Right: Navigation Menu Button */
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .nav-menu-btn {
@@ -248,9 +256,10 @@ img {
   font-size: 1rem;
   color: var(--primary-color);
   font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 16px;
+  border-radius: 8px;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .nav-menu-btn:hover {
@@ -499,62 +508,40 @@ img {
     font-size: 2.5rem;
   }
   
-  .mission-grid {
-    gap: 3rem;
+  .foundation-name h1 {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .header-center {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+  .nav-container {
+    gap: 0.5rem;
+  }
+  
+  .header-left {
+    gap: 0.75rem;
   }
   
   .foundation-name h1 {
-    font-size: 1.3rem;
-    margin-bottom: 0;
+    font-size: 1.2rem;
   }
   
-  .donate-btn-desktop {
-    display: none;
+  .btn-donate-header {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
   
-  .donate-link-mobile {
-    display: block;
+  .nav-menu-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
   }
   
   .hero-title {
     font-size: 2.2rem;
   }
   
-  .mission-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .mission-stats {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-photo-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero-photo-column {
-    max-width: 100%;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
+  .section-header h2 {
+    font-size: 2rem;
   }
   
   .footer-bottom {
@@ -563,14 +550,41 @@ img {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
   .header-center {
-    flex-direction: column;
-    gap: 0.5rem;
+    display: none;
   }
   
-  .section-header h2 {
-    font-size: 2rem;
+  .donate-link-mobile {
+    display: block;
+  }
+  
+  .foundation-name h1 {
+    font-size: 1.1rem;
+  }
+  
+  .logo-img {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .nav-menu-btn .menu-text {
+    display: none;
+  }
+  
+  .nav-menu-btn {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .foundation-name h1 {
+    font-size: 1rem;
+  }
+  
+  .logo-img {
+    height: 30px;
+    width: 30px;
   }
   
   .hero-title {
@@ -581,27 +595,25 @@ img {
     font-size: 1rem;
   }
   
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .sectors-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .involvement-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .stories-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .newsletter-form {
     flex-direction: column;
   }
   
   .newsletter-input {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-container {
+    padding: 0 15px;
+  }
+  
+  .header-left {
+    gap: 0.5rem;
+  }
+  
+  .foundation-name h1 {
+    font-size: 0.9rem;
   }
 }
