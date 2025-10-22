@@ -180,6 +180,7 @@ img {
   padding: 0 20px;
 }
 
+/* Left: Logo */
 .logo {
   flex: 0 0 auto;
 }
@@ -195,17 +196,44 @@ img {
   object-fit: contain;
 }
 
-.foundation-name {
+/* Center: Foundation Name + Donate Button */
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   text-align: center;
 }
 
 .foundation-name h1 {
   font-size: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   color: var(--primary-color);
 }
 
+.donate-btn-desktop {
+  margin-top: 0.25rem;
+}
+
+.btn-donate-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-donate-header:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Right: Menu Button */
 .nav-controls {
   flex: 0 0 auto;
 }
@@ -233,6 +261,7 @@ img {
   font-size: 1.2rem;
 }
 
+/* Dropdown Navigation Menu */
 .nav-dropdown-panel {
   position: absolute;
   top: 100%;
@@ -286,10 +315,11 @@ img {
   text-align: center;
 }
 
-.donate-link {
+.donate-link-mobile {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .btn-donate-menu {
@@ -301,6 +331,8 @@ img {
   align-items: center;
   gap: 8px;
   transition: var(--transition);
+  width: 100%;
+  justify-content: center;
 }
 
 .btn-donate-menu:hover {
@@ -473,8 +505,24 @@ img {
 }
 
 @media (max-width: 768px) {
+  .header-center {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
   .foundation-name h1 {
     font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  
+  .donate-btn-desktop {
+    display: none;
+  }
+  
+  .donate-link-mobile {
+    display: block;
   }
   
   .hero-title {
@@ -516,6 +564,11 @@ img {
 }
 
 @media (max-width: 576px) {
+  .header-center {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
   .section-header h2 {
     font-size: 2rem;
   }
