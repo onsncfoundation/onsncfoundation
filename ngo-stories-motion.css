@@ -1,0 +1,227 @@
+/ Base section /
+    .stories-motion {
+      position: relative;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      padding: 40px 0 20px;
+      text-align: center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+    .stories-motion .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    / Main slider /
+    .swiper.mySwiper {
+      width: 100%;
+      height: 80vh;
+      max-height: 900px;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    / Video + overlay + caption container /
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      --overlay-shift: 0px;  / updated via JS for parallax /
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      transform: translateZ(0);
+    }
+
+    / Gradient overlay behind captions (parallax-enabled) /
+    .video-container::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%; / adjust gradient height /
+      background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+      pointer-events: none;
+      transform: translateY(var(--overlay-shift));
+      transition: transform 0.3s ease-out;
+    }
+
+    / Caption with fade-in and subtle parallax /
+    .caption {
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      color: #fff;
+      padding: 15px 20px;
+      max-width: 60%;
+      text-align: left;
+
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.2s ease forwards;
+      animation-delay: 0.5s;
+      transition: transform 0.3s ease-out;
+    }
+    .caption h3 {
+      margin: 0 0 6px;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+    .caption p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      opacity: 0.95;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0);      }
+    }
+
+    / Navigation buttons and pagination (Swiper defaults) /
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+    }
+    .swiper-pagination-bullet {
+      background: rgba(255,255,255,0.6);
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: #ffcc00;
+    }
+
+    / Play/Pause button /
+    .autoplay-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.1s ease;
+      user-select: none;
+    }
+    .autoplay-btn:hover { background: rgba(255,255,255,0.2); }
+    .autoplay-btn:active { transform: scale(0.98); }
+
+    / Progress bar /
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: rgba(255,255,255,0.2);
+      overflow: hidden;
+      z-index: 30;
+    }
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: #ffcc00; / adjust brand color /
+      transition: width linear;
+    }
+
+    / Thumbnail strip /
+    .myThumbs {
+      margin: 15px auto 0;
+      height: 100px;
+      max-width: 1200px;
+      box-sizing: border-box;
+      padding: 0 12px;
+    }
+    .myThumbs .swiper-slide {
+      width: 25%;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity 0.25s ease, transform 0.2s ease;
+    }
+    .myThumbs .swiper-slide:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .myThumbs .swiper-slide-thumb-active {
+      opacity: 1;
+      border: 2px solid #ffcc00;
+      border-radius: 6px;
+    }
+    .myThumbs img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    / Lightbox overlay /
+    .lightbox {
+      display: none; / hidden by default /
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox-content {
+      position: relative;
+      width: 90%;
+      max-width: 1200px;
+      height: 80vh;
+      max-height: 900px;
+    }
+    .lightbox-content iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: #000;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      cursor: pointer;
+      z-index: 10000;
+      line-height: 1;
+      user-select: none;
+    }
+
+    / Responsive tweaks /
+    @media (max-width: 768px) {
+      .swiper.mySwiper { height: 65vh; }
+      .caption { max-width: 85%; bottom: 8%; left: 5%; }
+      .caption h3 { font-size: 1.3rem; }
+      .caption p { font-size: 0.95rem; }
+      .myThumbs { height: 84px; }
+    }
+    @media (max-width: 480px) {
+      .swiper.mySwiper { height: 58vh; }
+      .caption { max-width: 92%; bottom: 7%; left: 4%; padding: 12px 14px; }
+      .caption h3 { font-size: 1.15rem; }
+      .caption p { font-size: 0.9rem; }
+      .autoplay-btn { bottom: 14px; right: 14px; padding: 8px 14px; font-size: 0.9rem; }
+      .myThumbs { height: 72px; }
+    }
+
