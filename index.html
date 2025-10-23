@@ -720,97 +720,102 @@
   </section>
 
 
+
   <!-- ================= STORIES IN MOTION SECTION ================= -->
   <section id="stories-section">
     <div class="container">
+      
+      <!-- Blue Hero Header -->
       <div class="section-header">
         <span class="section-badge">📹 Impact Stories</span>
         <h2>Stories in Motion</h2>
         <p>Watch the real-life impact of our work through powerful visual stories from communities we serve</p>
       </div>
-  <section class="stories-motion" aria-label="Stories in Motion video showcase">
-    
 
-    <h2 class="section-title">Stories in Motion</h2>
+      <!-- Stories Motion Content -->
+      <section class="stories-motion" aria-label="Stories in Motion video showcase">
+        
+        <button id="toggleAutoplay" class="autoplay-btn" aria-pressed="false" aria-label="Pause autoplay">⏸ Pause</button>
 
-    <button id="toggleAutoplay" class="autoplay-btn" aria-pressed="false" aria-label="Pause autoplay">⏸ Pause</button>
+        <!-- Main Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
 
-    <!-- Main Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1: replace src with free MP4 from Pexels/Pixabay -->
-        <div class="swiper-slide">
-          <div class="video-container">
-            <video class="slide-video" muted playsinline preload="metadata" loop>
-              <source src="https://cdn.pixabay.com/download/video1.mp4" type="video/mp4" />
-              Your browser does not support HTML5 video.
-            </video>
-            <div class="caption">
-              <h3>Empowering Education in Assam</h3>
-              <p>Transforming classrooms and futures through community-led initiatives.</p>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="video-container">
+                <video class="slide-video" muted playsinline preload="metadata" loop>
+                  <source src="https://cdn.pixabay.com/vimeo/853678732/Aerial%20-%2091264.mp4?width=1280&hash=a4c4e79ded0fad0b24db49b79dfefb96d18db59b" type="video/mp4" />
+                  Your browser does not support HTML5 video.
+                </video>
+                <div class="caption">
+                  <h3>Empowering Education in Assam</h3>
+                  <p>Transforming classrooms and futures through community-led initiatives.</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="video-container">
+                <video class="slide-video" muted playsinline preload="metadata" loop>
+                  <source src="https://cdn.pixabay.com/vimeo/539448829/Silhouettes%20-%2058142.mp4?width=1280&hash=f0b6806d76a6d90d7c6535de4e1fb3f5fc07fb5b" type="video/mp4" />
+                </video>
+                <div class="caption">
+                  <h3>Healthcare Access for All</h3>
+                  <p>Stories of hope and care from underserved rural communities.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="video-container">
+                <video class="slide-video" muted playsinline preload="metadata" loop>
+                  <source src="https://cdn.pixabay.com/vimeo/400815088/Green%20-%2038655.mp4?width=1280&hash=23af0fc9af3ef6be8b0bb0e7bae34fbc8eb5fc4e" type="video/mp4" />
+                </video>
+                <div class="caption">
+                  <h3>Greener Villages</h3>
+                  <p>Environmental initiatives creating lasting change at the grassroots.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="video-container">
+                <video class="slide-video" muted playsinline preload="metadata" loop>
+                  <source src="https://cdn.pixabay.com/vimeo/411003240/Handshake%20-%2039776.mp4?width=1280&hash=7a53d4b52b5be2e59d49c9d2c5c1a6db33c87bbc" type="video/mp4" />
+                </video>
+                <div class="caption">
+                  <h3>Community Empowerment</h3>
+                  <p>Building resilience and leadership for sustainable development.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Pagination + Arrows -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next" aria-label="Next slide"></div>
+          <div class="swiper-button-prev" aria-label="Previous slide"></div>
+
+          <!-- Progress Bar -->
+          <div class="progress-bar"><div class="progress-fill"></div></div>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="video-container">
-            <video class="slide-video" muted playsinline preload="metadata" loop>
-              <source src="https://cdn.pexels.com/videos/video2.mp4" type="video/mp4" />
-            </video>
-            <div class="caption">
-              <h3>Healthcare Access for All</h3>
-              <p>Stories of hope and care from underserved rural communities.</p>
-            </div>
+        <!-- Thumbnails -->
+        <div class="swiper myThumbs" aria-label="Video thumbnails">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/07/19/10/00/school-student-851328_640.jpg" alt="Education thumbnail" /></div>
+            <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_640.jpg" alt="Healthcare thumbnail" /></div>
+            <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg" alt="Greener Villages thumbnail" /></div>
+            <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_640.jpg" alt="Community thumbnail" /></div>
           </div>
         </div>
+      </section>
 
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="video-container">
-            <video class="slide-video" muted playsinline preload="metadata" loop>
-              <source src="https://cdn.videvo.net/videos/video3.mp4" type="video/mp4" />
-            </video>
-            <div class="caption">
-              <h3>Greener Villages</h3>
-              <p>Environmental initiatives creating lasting change at the grassroots.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div class="video-container">
-            <video class="slide-video" muted playsinline preload="metadata" loop>
-              <source src="https://cdn.pixabay.com/download/video4.mp4" type="video/mp4" />
-            </video>
-            <div class="caption">
-              <h3>Community Empowerment</h3>
-              <p>Building resilience and leadership for sustainable development.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Pagination + Arrows -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next" aria-label="Next slide"></div>
-      <div class="swiper-button-prev" aria-label="Previous slide"></div>
-
-      <!-- Progress Bar -->
-      <div class="progress-bar"><div class="progress-fill"></div></div>
-    </div>
-
-    <!-- Thumbnails (images from stock or generated from MP4s) -->
-    <div class="swiper myThumbs" aria-label="Video thumbnails">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://cdn.pixabay.com/thumb1.jpg" alt="Education thumbnail" /></div>
-        <div class="swiper-slide"><img src="https://cdn.pexels.com/thumb2.jpg" alt="Healthcare thumbnail" /></div>
-        <div class="swiper-slide"><img src="https://cdn.videvo.net/thumb3.jpg" alt="Greener Villages thumbnail" /></div>
-        <div class="swiper-slide"><img src="https://cdn.pixabay.com/thumb4.jpg" alt="Community thumbnail" /></div>
-      </div>
     </div>
   </section>
 
@@ -822,10 +827,7 @@
     </div>
   </div>
 
-  
-  
-  
-          
+
 
   <!-- ================= FOOTER SECTION ================= -->
   <footer id="footer">
