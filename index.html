@@ -720,7 +720,6 @@
   </section>
 
 
-  
   <!-- ================= STORIES IN MOTION SECTION ================= -->
   <section id="stories-section">
     <div class="container">
@@ -729,23 +728,24 @@
         <h2>Stories in Motion</h2>
         <p>Watch the real-life impact of our work through powerful visual stories from communities we serve</p>
       </div>
-<section class="stories-motion" aria-label="Stories in Motion video showcase">
+  <section class="stories-motion" aria-label="Stories in Motion video showcase">
+    
+
     <h2 class="section-title">Stories in Motion</h2>
 
-    <!-- Play/Pause control -->
     <button id="toggleAutoplay" class="autoplay-btn" aria-pressed="false" aria-label="Pause autoplay">⏸ Pause</button>
 
     <!-- Main Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
 
-        <!-- Slide 1 -->
+        <!-- Slide 1: replace src with free MP4 from Pexels/Pixabay -->
         <div class="swiper-slide">
           <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/rwtnaZTaqPg?autoplay=1&mute=1&loop=1&playlist=rwtnaZTaqPg&rel=0&modestbranding=1&playsinline=1"
-              title="Empowering Education in Assam"
-              frameborder="0" allowfullscreen></iframe>
+            <video class="slide-video" muted playsinline preload="metadata" loop>
+              <source src="https://cdn.pixabay.com/download/video1.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
             <div class="caption">
               <h3>Empowering Education in Assam</h3>
               <p>Transforming classrooms and futures through community-led initiatives.</p>
@@ -756,10 +756,9 @@
         <!-- Slide 2 -->
         <div class="swiper-slide">
           <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/0-KeQ6ZLnA?autoplay=1&mute=1&loop=1&playlist=0-KeQ6ZLnA&rel=0&modestbranding=1&playsinline=1"
-              title="Healthcare Access for All"
-              frameborder="0" allowfullscreen></iframe>
+            <video class="slide-video" muted playsinline preload="metadata" loop>
+              <source src="https://cdn.pexels.com/videos/video2.mp4" type="video/mp4" />
+            </video>
             <div class="caption">
               <h3>Healthcare Access for All</h3>
               <p>Stories of hope and care from underserved rural communities.</p>
@@ -770,10 +769,9 @@
         <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/po3JYab9N3c?autoplay=1&mute=1&loop=1&playlist=po3JYab9N3c&rel=0&modestbranding=1&playsinline=1"
-              title="Greener Villages"
-              frameborder="0" allowfullscreen></iframe>
+            <video class="slide-video" muted playsinline preload="metadata" loop>
+              <source src="https://cdn.videvo.net/videos/video3.mp4" type="video/mp4" />
+            </video>
             <div class="caption">
               <h3>Greener Villages</h3>
               <p>Environmental initiatives creating lasting change at the grassroots.</p>
@@ -784,10 +782,9 @@
         <!-- Slide 4 -->
         <div class="swiper-slide">
           <div class="video-container">
-            <iframe
-              src="https://www.youtube.com/embed/8J4cMby6aQk?autoplay=1&mute=1&loop=1&playlist=8J4cMby6aQk&rel=0&modestbranding=1&playsinline=1"
-              title="Community Empowerment"
-              frameborder="0" allowfullscreen></iframe>
+            <video class="slide-video" muted playsinline preload="metadata" loop>
+              <source src="https://cdn.pixabay.com/download/video4.mp4" type="video/mp4" />
+            </video>
             <div class="caption">
               <h3>Community Empowerment</h3>
               <p>Building resilience and leadership for sustainable development.</p>
@@ -798,42 +795,37 @@
       </div>
 
       <!-- Pagination + Arrows -->
-      <div class="swiper-pagination" aria-label="Slide pagination"></div>
+      <div class="swiper-pagination"></div>
       <div class="swiper-button-next" aria-label="Next slide"></div>
       <div class="swiper-button-prev" aria-label="Previous slide"></div>
 
       <!-- Progress Bar -->
-      <div class="progress-bar" aria-hidden="true">
-        <div class="progress-fill"></div>
-      </div>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
     </div>
 
-    <!-- Thumbnails -->
+    <!-- Thumbnails (images from stock or generated from MP4s) -->
     <div class="swiper myThumbs" aria-label="Video thumbnails">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://img.youtube.com/vi/rwtnaZTaqPg/mqdefault.jpg" alt="Education in Assam"/>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://img.youtube.com/vi/0-KeQ6ZLn_A/mqdefault.jpg" alt="Healthcare Access"/>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://img.youtube.com/vi/po3JYab9N3c/mqdefault.jpg" alt="Greener Villages"/>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://img.youtube.com/vi/8J4cMby6aQk/mqdefault.jpg" alt="Community Empowerment"/>
-        </div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/thumb1.jpg" alt="Education thumbnail" /></div>
+        <div class="swiper-slide"><img src="https://cdn.pexels.com/thumb2.jpg" alt="Healthcare thumbnail" /></div>
+        <div class="swiper-slide"><img src="https://cdn.videvo.net/thumb3.jpg" alt="Greener Villages thumbnail" /></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/thumb4.jpg" alt="Community thumbnail" /></div>
       </div>
     </div>
   </section>
 
-  <!-- Lightbox Overlay -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Video Lightbox">
     <span class="close" role="button" aria-label="Close">&times;</span>
     <div class="lightbox-content">
-      <iframe id="lightbox-video" src="" title="Lightbox video" frameborder="0" allowfullscreen></iframe>
+      <video id="lightbox-video" controls playsinline></video>
     </div>
   </div>
+
+  
+  
+  
+          
 
   <!-- ================= FOOTER SECTION ================= -->
   <footer id="footer">
