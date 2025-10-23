@@ -157,6 +157,83 @@ img {
   color: var(--primary-color);
 }
 
+
+
+/* 🌐 Top Header Styles */
+.top-header {
+  background-color: #00264d; /* Dark Blue */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1001;
+}
+
+.top-header-left {
+  font-weight: 500;
+}
+
+.top-header-right {
+  position: relative;
+}
+
+/* Language button */
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lang-btn:hover {
+  color: #00b4ff;
+}
+
+/* Dropdown Menu */
+.language-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background-color: #003366;
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+  border-radius: 8px;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-dropdown li {
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.language-dropdown li:hover {
+  background-color: #00509e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
 /* ================= HEADER SECTION ================= */
 #header {
   position: sticky;
