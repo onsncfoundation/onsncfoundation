@@ -27,20 +27,14 @@
 <body>
 
   <!-- 🌐 Top Header with Language Switcher -->
-<div class="top-header">
-  <div class="top-header-left">
-    🌎 Welcome to ONSNC Foundation — Towards Civilization 3.0
-  </div>
-  <div class="top-header-right">
-    <div class="language-menu">
-      <button class="lang-btn" id="langToggleBtn">🌐 Language</button>
-      <ul class="language-dropdown" id="langDropdown">
-        <li onclick="changeLanguage('en')">English</li>
-        <li onclick="changeLanguage('hi')">हिन्दी</li>
-        <li onclick="changeLanguage('as')">অসমীয়া</li>
-      </ul>
-    </div>
-  </div>
+<!-- place this inside your existing header container where you want the top-right language selector -->
+<div class="onsnc-lang-top" aria-label="Language selector">
+  <label for="onsnc-lang-select" class="onsnc-sr">Choose language</label>
+  <select id="onsnc-lang-select" aria-labelledby="onsnc-lang-label" aria-live="polite">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+    <option value="as">অসমীয়া</option>
+  </select>
 </div>
   
 
