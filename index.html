@@ -7,6 +7,8 @@
   <meta name="description" content="ONSNC Foundation - Driving sustainable community projects, research, and global impact initiatives">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   
   <!-- Global CSS -->
   <link rel="stylesheet" href="global.css">
@@ -727,76 +729,114 @@
         <h2>Stories in Motion</h2>
         <p>Watch the real-life impact of our work through powerful visual stories from communities we serve</p>
       </div>
+<section class="stories-motion" aria-label="Stories in Motion video showcase">
+    <h2 class="section-title">Stories in Motion</h2>
 
-      <div class="stories-grid">
-        
-        <div class="story-card">
+    <!-- Play/Pause control -->
+    <button id="toggleAutoplay" class="autoplay-btn" aria-pressed="false" aria-label="Pause autoplay">⏸ Pause</button>
+
+    <!-- Main Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
           <div class="video-container">
-            <video controls poster="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop">
-              <source src="your-video-1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay">
-              <button class="play-button" onclick="playVideo(this)">
-                <i class="fas fa-play"></i>
-              </button>
+            <iframe
+              src="https://www.youtube.com/embed/rwtnaZTaqPg?autoplay=1&mute=1&loop=1&playlist=rwtnaZTaqPg&rel=0&modestbranding=1&playsinline=1"
+              title="Empowering Education in Assam"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Empowering Education in Assam</h3>
+              <p>Transforming classrooms and futures through community-led initiatives.</p>
             </div>
-          </div>
-          <div class="story-content">
-            <h3>Transforming Rural Education</h3>
-            <p>Discover how our digital literacy program is empowering children in remote villages.</p>
-            <span class="story-meta"><i class="fas fa-clock"></i> 3 min</span>
           </div>
         </div>
 
-        <div class="story-card">
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
           <div class="video-container">
-            <video controls poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop">
-              <source src="your-video-2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay">
-              <button class="play-button" onclick="playVideo(this)">
-                <i class="fas fa-play"></i>
-              </button>
+            <iframe
+              src="https://www.youtube.com/embed/0-KeQ6ZLnA?autoplay=1&mute=1&loop=1&playlist=0-KeQ6ZLnA&rel=0&modestbranding=1&playsinline=1"
+              title="Healthcare Access for All"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Healthcare Access for All</h3>
+              <p>Stories of hope and care from underserved rural communities.</p>
             </div>
-          </div>
-          <div class="story-content">
-            <h3>Healthcare Outreach Success</h3>
-            <p>See how mobile health camps are bringing medical care to underserved communities.</p>
-            <span class="story-meta"><i class="fas fa-clock"></i> 5 min</span>
           </div>
         </div>
 
-        <div class="story-card">
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
           <div class="video-container">
-            <video controls poster="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&h=400&fit=crop">
-              <source src="your-video-3.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay">
-              <button class="play-button" onclick="playVideo(this)">
-                <i class="fas fa-play"></i>
-              </button>
+            <iframe
+              src="https://www.youtube.com/embed/po3JYab9N3c?autoplay=1&mute=1&loop=1&playlist=po3JYab9N3c&rel=0&modestbranding=1&playsinline=1"
+              title="Greener Villages"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Greener Villages</h3>
+              <p>Environmental initiatives creating lasting change at the grassroots.</p>
             </div>
           </div>
-          <div class="story-content">
-            <h3>Sustainable Farming Revolution</h3>
-            <p>Learn about farmers adopting organic methods and renewable energy solutions.</p>
-            <span class="story-meta"><i class="fas fa-clock"></i> 4 min</span>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/8J4cMby6aQk?autoplay=1&mute=1&loop=1&playlist=8J4cMby6aQk&rel=0&modestbranding=1&playsinline=1"
+              title="Community Empowerment"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Community Empowerment</h3>
+              <p>Building resilience and leadership for sustainable development.</p>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div class="stories-cta">
-        <a href="#all-stories" class="btn btn-explore">
-          <span>View All Stories</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
+      <!-- Pagination + Arrows -->
+      <div class="swiper-pagination" aria-label="Slide pagination"></div>
+      <div class="swiper-button-next" aria-label="Next slide"></div>
+      <div class="swiper-button-prev" aria-label="Previous slide"></div>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar" aria-hidden="true">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="swiper myThumbs" aria-label="Video thumbnails">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/rwtnaZTaqPg/mqdefault.jpg" alt="Education in Assam"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/0-KeQ6ZLn_A/mqdefault.jpg" alt="Healthcare Access"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/po3JYab9N3c/mqdefault.jpg" alt="Greener Villages"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/8J4cMby6aQk/mqdefault.jpg" alt="Community Empowerment"/>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Video Lightbox">
+    <span class="close" role="button" aria-label="Close">&times;</span>
+    <div class="lightbox-content">
+      <iframe id="lightbox-video" src="" title="Lightbox video" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+      
+      
 
   <!-- ================= CTA SECTION ================= -->
   <section id="cta">
@@ -889,6 +929,8 @@
   <script src="get-involved-section.js"></script>
   <script src="ngo-stories-section.js"></script>
   <script src="ngo-cta-section.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <!-- Section Loader -->
   <script>
