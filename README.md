@@ -1,4 +1,3 @@
-
 🌍 ONSNC Foundation — Towards Civilization 3.0
 
 Building a Conscious, Equitable, and Technologically Advanced Future
