@@ -4,10 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Volunteer Network | ONSNC Foundation</title>
+  <link rel="stylesheet" href="global.css" />
   <link rel="stylesheet" href="volunteer.css" />
 </head>
 <body>
 
+  
+  <!-- 🌐 Top Header with Language Switcher -->
+  <div class="container">
+    <a href="/" class="brand" id="onsnc-brand" aria-label="ONSNC Foundation" data-i18n="hero_title">Welcome to ONSNC Foundation</a>
+
+    <div class="lang-switch" aria-label="Language selector">
+      <label for="lang-select" class="visually-hidden" id="lang-label" data-i18n="arialanglabel">Choose language</label>
+      <select id="lang-select" aria-labelledby="lang-label" aria-live="polite">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="as">অসমীয়া</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Left: Logo + Foundation Name -->
+        <div class="header-left">
+          <div class="logo">
+            <a href="index.html">
+              <img src="https://via.placeholder.com/40x40?text=ONSNC" alt="ONSNC Foundation Logo" class="logo-img">
+            </a>
+          </div>
+          <div class="foundation-name">
+            <h1>ONSNC Foundation</h1>
+          </div>
+        </div>
+
+        <!-- Center: Donate Now Button -->
+        <div class="header-center">
+          <a href="donate.html" class="btn-donate-header">
+            <i class="fas fa-heart"></i>
+            <span>Donate Now</span>
+          </a>
+        </div>
+
+        <!-- Right: Navigation Menu -->
+        <div class="header-right">
+          <button class="nav-menu-btn" id="navMenuBtn">
+            <span class="menu-text">Menu</span>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Dropdown Navigation Menu -->
+      <div class="nav-dropdown-panel" id="navDropdownPanel">
+        <ul class="nav-dropdown-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="ourwork.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+          <li><a href="campaigns.html"><i class="fas fa-bullhorn"></i> Campaigns</a></li>
+          <li><a href="get-involved.html"><i class="fas fa-hands-helping"></i> Get Involved</a></li>
+          <li><a href="media-center.html"><i class="fas fa-photo-video"></i> Media Centre</a></li>
+          <li><a href="resources"><i class="fas fa-book"></i> Resource Center</a></li>
+          <li><a href="ngo-contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li class="donate-link-mobile">
+            <a href="donate.html" class="btn-donate-menu">
+              <i class="fas fa-heart"></i>
+              <span>Donate Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  
   <!-- HERO SECTION -->
   <header class="volunteer-hero">
     <div class="overlay"></div>
@@ -76,9 +148,75 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 ONSNC Foundation | Volunteer Network</p>
+  
+    <!-- ================= FOOTER SECTION ================= -->
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>🌍 ONSNC Foundation</h3>
+          <p>Building neo-sustainable communities through innovation, research, and collaborative action.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ngo-about.html">About Us</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="media">Media Centre</a></li>
+            <li><a href="#resources">Resource Center</a></li>
+            <li><a href="ngo-contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Horizontal Line -->
+      <hr class="footer-divider">
+
+      <!-- Newsletter Section - Centered -->
+      <div class="newsletter-section">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Stay updated with our latest news and initiatives</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="text" name="name" placeholder="Name" required class="newsletter-input">
+          <input type="email" name="email" placeholder="Enter Your Email" required class="newsletter-input">
+          <button type="submit" class="btn-subscribe">
+            <span>Subscribe</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Horizontal Line -->
+      <hr class="footer-divider">
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 ONSNC Foundation. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+   <!-- Global JavaScript -->
+  <script src="global.js"></script>
 
   <script src="volunteer.js"></script>
 </body>
