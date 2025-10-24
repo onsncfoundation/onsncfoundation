@@ -42,7 +42,7 @@ body {
 
 /* ================= SECTION HEADER (Banner Style) ================= */
 
-.section-header {
+.media-center .section-header {
   text-align: center;
   margin-bottom: 60px;
   padding: 50px 30px;
@@ -53,7 +53,7 @@ body {
   overflow: hidden;
 }
 
-.section-header::before {
+.media-center .section-header::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -61,50 +61,53 @@ body {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-  animation: pulse 4s ease-in-out infinite;
+  animation: mc-pulse 4s ease-in-out infinite;
 }
 
-@keyframes pulse {
+@keyframes mc-pulse {
   0%, 100% { transform: scale(1); opacity: 0.5; }
   50% { transform: scale(1.1); opacity: 0.8; }
 }
 
-.section-badge {
+.media-center .section-badge {
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
   padding: 8px 24px;
   border-radius: 50px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  letter-spacing: 1px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.section-title {
+.media-center .section-title {
   font-size: 2.8rem;
-  color: white;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 15px;
   font-weight: 700;
   position: relative;
   z-index: 1;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 }
 
-.section-subtitle {
+.media-center .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 1);
   max-width: 700px;
   margin: 0 auto;
   font-weight: 400;
   position: relative;
   z-index: 1;
   line-height: 1.8;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* ================= CARDS GRID ================= */
@@ -158,13 +161,9 @@ body {
 
 .mc-card h3 {
   font-size: 1.5rem;
-  color: #333;
+  color: #6b46c1;
   margin: 20px 20px 10px;
-  font-weight: 600;
-  background: linear-gradient(135deg, #6b46c1 0%, #553c9a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700;
 }
 
 .mc-card p {
@@ -228,16 +227,16 @@ body {
     padding: 60px 20px;
   }
 
-  .section-header {
+  .media-center .section-header {
     padding: 40px 25px;
     margin-bottom: 50px;
   }
 
-  .section-title {
+  .media-center .section-title {
     font-size: 2.3rem;
   }
 
-  .section-subtitle {
+  .media-center .section-subtitle {
     font-size: 1.1rem;
   }
 
@@ -253,22 +252,22 @@ body {
     padding: 50px 20px;
   }
 
-  .section-header {
+  .media-center .section-header {
     padding: 35px 20px;
     margin-bottom: 40px;
     border-radius: 15px;
   }
 
-  .section-badge {
+  .media-center .section-badge {
     font-size: 0.85rem;
     padding: 6px 20px;
   }
 
-  .section-title {
+  .media-center .section-title {
     font-size: 2rem;
   }
 
-  .section-subtitle {
+  .media-center .section-subtitle {
     font-size: 1rem;
   }
 
@@ -298,23 +297,23 @@ body {
     padding: 40px 15px;
   }
 
-  .section-header {
+  .media-center .section-header {
     padding: 30px 15px;
     margin-bottom: 35px;
     border-radius: 12px;
   }
 
-  .section-badge {
+  .media-center .section-badge {
     font-size: 0.8rem;
     padding: 5px 18px;
     margin-bottom: 15px;
   }
 
-  .section-title {
+  .media-center .section-title {
     font-size: 1.6rem;
   }
 
-  .section-subtitle {
+  .media-center .section-subtitle {
     font-size: 0.95rem;
   }
 
