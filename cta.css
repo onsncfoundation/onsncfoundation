@@ -1,491 +1,343 @@
-/* Import AOS Library for animations */
-@import url('https://unpkg.com/aos@2.3.1/dist/aos.css');
+     /* Reset for CTA section only */
+        .onsnc-cta-section * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* CTA Section */
-.cta-section {
-    background: linear-gradient(135deg, #0f2557 0%, #1e3a8a 50%, #3b82f6 100%);
-    text-align: center;
-    padding: 120px 0;
-    position: relative;
-    overflow: hidden;
-}
+        /* Main CTA Section */
+        .onsnc-cta-section {
+            background: linear-gradient(135deg, #1a3a6d 0%, #2563eb 100%);
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
 
-/* Animated Background */
-.bg-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
+        /* Background Pattern */
+        .onsnc-cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(30, 58, 138, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
 
-.floating-shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    animation: float 20s infinite ease-in-out;
-}
+        /* Container */
+        .onsnc-cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
 
-.shape-1 {
-    width: 300px;
-    height: 300px;
-    top: -50px;
-    left: -50px;
-    animation-delay: 0s;
-}
+        /* Main Card */
+        .onsnc-cta-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            margin-bottom: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.shape-2 {
-    width: 200px;
-    height: 200px;
-    top: 60%;
-    right: -30px;
-    animation-delay: 5s;
-}
+        .onsnc-cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+        }
 
-.shape-3 {
-    width: 150px;
-    height: 150px;
-    bottom: 10%;
-    left: 15%;
-    animation-delay: 10s;
-}
+        /* Badge */
+        .onsnc-cta-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
 
-.shape-4 {
-    width: 250px;
-    height: 250px;
-    top: 30%;
-    right: 20%;
-    animation-delay: 15s;
-}
+        /* Title */
+        .onsnc-cta-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1a3a6d;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
 
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-    }
-    33% {
-        transform: translate(30px, -30px) scale(1.1);
-    }
-    66% {
-        transform: translate(-20px, 20px) scale(0.9);
-    }
-}
+        /* Description */
+        .onsnc-cta-description {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
 
-/* Container */
-.cta-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-}
+        /* Stats Grid */
+        .onsnc-cta-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            padding: 30px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-/* Main CTA Card */
-.cta-content {
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 70px 50px;
-    position: relative;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        .onsnc-stat-item {
+            text-align: center;
+        }
 
-.cta-content:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
-}
+        .onsnc-stat-number {
+            display: block;
+            font-size: 36px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
 
-.cta-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
-    border-radius: 30px 30px 0 0;
-}
+        .onsnc-stat-label {
+            display: block;
+            font-size: 14px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
 
-/* Badge */
-.badge {
-    display: inline-block;
-    padding: 8px 20px;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #fff;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 20px rgba(251, 191, 36, 0.3);
-    animation: pulse 2s infinite;
-}
+        /* Primary Button */
+        .onsnc-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: #fff;
+            padding: 18px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3);
+            border: none;
+            cursor: pointer;
+        }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
+        .onsnc-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(22, 163, 74, 0.4);
+            background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+        }
 
-/* Title */
-.cta-title {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    margin-bottom: 25px;
-    color: #0f2557;
-    background: linear-gradient(135deg, #0f2557 0%, #1e3a8a 50%, #3b82f6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.2;
-}
+        /* Donate Card */
+        .onsnc-donate-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* Description */
-.cta-description {
-    font-size: 1.15rem;
-    color: #64748b;
-    max-width: 650px;
-    margin: 0 auto 40px;
-    line-height: 1.8;
-    font-weight: 400;
-}
+        .onsnc-donate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2);
+        }
 
-/* Stats Row */
-.stats-row {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 40px 0;
-    padding: 30px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
+        /* Donate Icon */
+        .onsnc-donate-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #fff;
+            flex-shrink: 0;
+        }
 
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
+        /* Donate Info */
+        .onsnc-donate-info {
+            text-align: left;
+        }
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1e3a8a;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+        .onsnc-donate-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a3a6d;
+            margin-bottom: 4px;
+        }
 
-.stat-label {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
+        .onsnc-donate-text {
+            font-size: 14px;
+            color: #64748b;
+        }
 
-/* CTA Button */
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 20px 40px;
-    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
-    color: white;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 35px rgba(25, 135, 84, 0.35);
-    position: relative;
-    overflow: hidden;
-}
+        /* Donate Button */
+        .onsnc-btn-donate {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
+        }
 
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s;
-}
+        .onsnc-btn-donate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(220, 38, 38, 0.4);
+            background: linear-gradient(135deg, #b91c1c 0%, #ea580c 100%);
+        }
 
-.cta-button:hover::before {
-    left: 100%;
-}
+        /* Progress Section */
+        .onsnc-progress-section {
+            margin-top: 20px;
+            grid-column: 1 / -1;
+        }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 45px rgba(25, 135, 84, 0.45);
-    background: linear-gradient(135deg, #157347 0%, #1aa179 100%);
-}
+        .onsnc-progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
 
-.cta-button i {
-    transition: transform 0.4s ease;
-}
+        .onsnc-progress-label {
+            color: #64748b;
+            font-weight: 600;
+        }
 
-.cta-button:hover i {
-    transform: translateX(5px);
-}
+        .onsnc-progress-value {
+            color: #1a3a6d;
+            font-weight: 700;
+        }
 
-/* Donate Card */
-.donate-card {
-    background: #ffffff;
-    border-radius: 25px;
-    padding: 40px;
-    margin-top: 30px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        .onsnc-progress-bar-bg {
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-.donate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
-}
+        .onsnc-progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #dc2626 0%, #f97316 100%);
+            border-radius: 10px;
+            width: 90%;
+            transition: width 1.5s ease;
+        }
 
-.donate-content {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
+        /* Trust Badges */
+        .onsnc-trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 32px;
+        }
 
-.donate-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: white;
-    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
-    animation: heartbeat 1.8s ease-in-out infinite;
-}
+        .onsnc-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
 
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    10%, 30% {
-        transform: scale(1.1);
-    }
-    20%, 40% {
-        transform: scale(1);
-    }
-}
+        .onsnc-badge-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
 
-.donate-info {
-    flex: 1;
-    text-align: left;
-    min-width: 200px;
-}
+        .onsnc-badge-item i {
+            font-size: 16px;
+        }
 
-.donate-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f2557;
-    margin-bottom: 5px;
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .onsnc-cta-section {
+                padding: 60px 16px;
+            }
 
-.donate-text {
-    font-size: 0.95rem;
-    color: #64748b;
-    margin: 0;
-}
+            .onsnc-cta-card {
+                padding: 40px 24px;
+            }
 
-.donate-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 35px;
-    background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.05rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 30px rgba(220, 38, 38, 0.35);
-    white-space: nowrap;
-}
+            .onsnc-cta-title {
+                font-size: 32px;
+            }
 
-.donate-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(220, 38, 38, 0.45);
-    background: linear-gradient(135deg, #b91c1c 0%, #ea580c 100%);
-}
+            .onsnc-cta-description {
+                font-size: 16px;
+            }
 
-.donate-button i {
-    transition: transform 0.4s ease;
-}
+            .onsnc-cta-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
 
-.donate-button:hover i {
-    transform: translateX(5px);
-}
+            .onsnc-stat-number {
+                font-size: 28px;
+            }
 
-/* Progress Bar */
-.progress-container {
-    margin-top: 25px;
-}
+            .onsnc-donate-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
 
-.progress-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    font-size: 0.9rem;
-}
+            .onsnc-donate-icon {
+                margin: 0 auto;
+            }
 
-.progress-label {
-    color: #64748b;
-    font-weight: 600;
-}
+            .onsnc-donate-info {
+                text-align: center;
+            }
 
-.progress-value {
-    color: #0f2557;
-    font-weight: 700;
-}
+            .onsnc-btn-primary,
+            .onsnc-btn-donate {
+                padding: 14px 24px;
+                font-size: 14px;
+            }
 
-.progress-bar {
-    height: 12px;
-    background: #e2e8f0;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
+            .onsnc-trust-badges {
+                gap: 12px;
+            }
 
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #dc2626 0%, #f97316 100%);
-    border-radius: 10px;
-    width: 0;
-    transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
-}
-
-.progress-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-/* Trust Badges */
-.trust-badges {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.badge-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.badge-item:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-3px);
-}
-
-.badge-item i {
-    font-size: 1.2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .cta-section {
-        padding: 80px 0;
-    }
-    
-    .cta-content {
-        padding: 50px 30px;
-    }
-    
-    .stats-row {
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
-    
-    .donate-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .donate-info {
-        text-align: center;
-    }
-    
-    .donate-card {
-        padding: 30px 25px;
-    }
-    
-    .cta-button,
-    .donate-button {
-        padding: 16px 30px;
-        font-size: 1rem;
-    }
-    
-    .trust-badges {
-        gap: 15px;
-    }
-    
-    .badge-item {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .stats-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .floating-shape {
-        display: none;
-    }
-}
+            .onsnc-badge-item {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
